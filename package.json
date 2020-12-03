@@ -1,0 +1,9 @@
+{
+  "name": "angularjs-dcywdd",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "angular": "1.6.9",
+    "@uirouter/angularjs": "1.0.15"
+  }
+}
