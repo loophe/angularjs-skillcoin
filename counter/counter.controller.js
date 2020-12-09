@@ -1,3 +1,4 @@
+
 class CounterCtrl {
   constructor($scope) {
     'ngInject';
@@ -7,3 +8,5 @@ class CounterCtrl {
 }
 
 export default CounterCtrl;
+
+

@@ -54,7 +54,7 @@ function log(message) {
  // log erro
  /*
   //var Web3 = require('web3');
- if (typeof web3 !== "undefined") {
+ if (typeof web3 === "undefined") {
       error("Unable to find web3. " +
             "Please run MetaMask (or something else that injects web3).");
     } else {
@@ -80,7 +80,8 @@ function log(message) {
             web3 = new Web3(new Web3.providers.HttpProvider("https://goerli.infura.io/v3/a827a1ff139849fcb54df9eeec6b123a"));
             var counter = new web3.eth.Contract(abi,address);
             log("UI版本：0.0.2"); 
-            log("web3 version:"+web3.version); 
+            log("web3 version:"+Web3.version); 
+          
             console.log(counter);
 
         }
@@ -91,7 +92,7 @@ function log(message) {
           return error(err);
         } else {
           $("#coinname").html(result+" ( 币名 Name)");
-          log("Tonken call executed successfully.");
+          log("TonkenName call executed successfully.");
           console.log(result);
         }
 
@@ -112,60 +113,60 @@ function log(message) {
       });
 
 
-// call the counter cap
+    // call the counter cap
 
       counter.methods.cap().call(function (err, result) {
         if (err) {
           return error(err);
         } else {
-          log("getCap call executed successfully.");
+          log("GetCap call executed successfully.");
           console.log(result);
         }
 
-        $('#count').text(result.toString()+"小数点后有18位");
+        $('#count').text(result.toString()/1000000000000000000);
       });
 
 
-// call the counter supply
-$('#getsupply').click(function (e) {
-      e.preventDefault();
+    // call the counter supply
+      $.getsupply = function (e) {
+            e.preventDefault();
 
-      log("Calling supply...");
+            log("Calling supply...");
 
-      counter.methods.totalSupply().call(function (err, result) {
-        if (err) {
-          return error(err);
-        } else {
-          log("getSupply call executed successfully.");
-          console.log(result);
-        }
+            counter.methods.totalSupply().call(function (err, result) {
+              if (err) {
+                return error(err);
+              } else {
+                log("getSupply call executed successfully.");
+                console.log(result);
+              }
 
-        // The return value is a BigNumber object
-   
-        $('#totalSupply').text(result.toString());
-      });
-    });
+              // The return value is a BigNumber object
+        
+              $('totalSupply').text(result.toString()/10000000000000000000);
+            });
+          };
 
 
-// call the address  quantity
-$('#quantityShow').click(function (e) {
-      e.preventDefault();
+    // call the address  balance
+      $('#quantityShow').click(function (e) {
+            e.preventDefault();
 
-      log("Calling supply...");
+            log("Calling supply...");
 
-      counter.methods.balanceOf($("#address").val()).call(function (err, result) {
-        if (err) {
-          return error(err);
-        } else {
-          log("addressBalance call executed successfully.");
-          console.log(result);
-        }
+            counter.methods.balanceOf($("#address").val()).call(function (err, result) {
+              if (err) {
+                return error(err);
+              } else {
+                log("addressBalance call executed successfully.");
+                console.log(result);
+              }
 
-        // The return value is a BigNumber object
-     
-        $('#addressQuantity').text(result.toString());
-      });
-    });
+              // The return value is a BigNumber object
+          
+              $('#addressQuantity').text(result.toString()/100000000000000000000);
+            });
+          });
 
 
 

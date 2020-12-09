@@ -10,8 +10,8 @@
 
     <button id="increment">只能查！（0.1.x版本将提供转账）search only!</button>
 
-    <p>流通量 Current supply: <span id="totalSupply">??</span></p>
-    <button id="getsupply">流通量 Get current supply</button>
+    <p>流通量 Current supply: <span {{"totalSupply"}}>??</span></p>
+    <button ng-click="counter.getsupply()">流通量 Get current supply</button>
 
     <p>余额 address balance: <span id="addressQuantity">??</span></p>
     <input id="address" placeholder="address" type="bytes32">
@@ -20,6 +20,9 @@
 
 
 
+    </div>
+      <h2>Log</h2>
+      <div id="log"></div>
+    <div >
+    
   </div>
-
-  <div id="log"></div>
