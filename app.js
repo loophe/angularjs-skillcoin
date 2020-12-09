@@ -5,12 +5,15 @@ import '@uirouter/angularjs';
 import './style.css';
 
 // Import your app functionality
-import './home'
+//import './home'
+
+// Import your app functionality
+import './counter'
 
 // Create and bootstrap application
 const requires = [
   'ui.router',
-  'home'
+  'counter'
 ];
 
 window.app = angular.module('app', requires);
