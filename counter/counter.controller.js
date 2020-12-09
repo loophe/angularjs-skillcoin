@@ -2,7 +2,7 @@ class CounterCtrl {
   constructor($scope) {
     'ngInject';
 
-    this.name = "AngularJS";
+    this.name = "Community";
   }
 }
 
