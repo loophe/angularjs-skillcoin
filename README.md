@@ -1,6 +1,5 @@
 # Project-SkillCoin
 
 
-[View page on Zsharing ⚡️](skillcoin.zsharing.net/counter/counter.html)
 
-[haha](http://skillcoin.zsharing.net/counter/counter.html)
+[View page on Zsharing ⚡️](http://skillcoin.zsharing.net/counter/counter.html)
