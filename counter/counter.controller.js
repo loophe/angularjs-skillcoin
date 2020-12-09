@@ -4,6 +4,15 @@ class CounterCtrl {
     'ngInject';
 
     this.name = "Community";
+
+
+    $scope.counter = {
+      getsupply: function(e){
+        e.preventDefault();
+
+          log("Calling supply...");
+      }
+    }
   }
 }
 

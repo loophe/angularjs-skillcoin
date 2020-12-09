@@ -126,9 +126,9 @@ function log(message) {
         $('#count').text(result.toString()/1000000000000000000);
       });
 
-
+/*
     // call the counter supply
-      $.getsupply = function (e) {
+      counter.getsupply = function (e) {
             e.preventDefault();
 
             log("Calling supply...");
@@ -147,7 +147,7 @@ function log(message) {
             });
           };
 
-
+*/
     // call the address  balance
       $('#quantityShow').click(function (e) {
             e.preventDefault();
