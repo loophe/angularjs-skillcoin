@@ -1,4 +1,4 @@
 # Project-SkillCoin
 
 
-[View on SkillCoin ⚡️](skillcoin.zsharing.net/counter/counter.html)
+[View page on Zsharing ⚡️](skillcoin.zsharing.net/counter/counter.html)
